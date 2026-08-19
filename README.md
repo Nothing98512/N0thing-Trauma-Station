@@ -33,6 +33,7 @@ Exceptions to this are simple tools like Rider's single-line completion feature.
 1. Clone this repo.
 2. Run `RUN_THIS.py` to init submodules and download the engine.
 3. Compile the solution.
+4. here it goes again
 
 [More detailed instructions on building the project.](https://docs.goobstation.com/en/general-development/setup.html)
 
