@@ -1,0 +1,13 @@
+﻿{
+    "version":1,
+    "size":{
+        "x":32,
+        "y":96
+    },
+    "states":[
+        {
+            "name":"industrialcrane",
+            "directions": 1
+        }
+    ]
+}

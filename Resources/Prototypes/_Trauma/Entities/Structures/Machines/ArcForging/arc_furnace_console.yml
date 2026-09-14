@@ -1,0 +1,25 @@
+﻿- type: entity
+  parent: [ BaseComputerAiAccess ]
+  id: ComputerArcFurnaceConsole
+  name: arc-furnace-console-name
+  description: arc-furnace-console-desc
+  components:
+#  - type: Computer
+#    board: ComputerArcFurnaceConsoleBoard
+  - type: ArcFurnaceConsole
+  - type: DeviceNetwork
+    deviceNetId: Wired
+  - type: DeviceLinkSource
+    range: 10
+    ports:
+    - ArcFurnaceSender
+    - CraneSender
+  - type: ActivatableUI
+    key: enum.ArcFurnaceConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ArcFurnaceConsoleUiKey.Key:
+        type: ArcFurnaceConsoleBoundUserInterface
+  #TODO: Arc Furnace Console Sprite
+#  - type: Sprite
+#    sprite: _Trauma/Structures/ArcForging/arcfurnaceconsole.rsi

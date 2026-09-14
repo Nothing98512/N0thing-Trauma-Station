@@ -1,0 +1,47 @@
+﻿- type: entity
+  id: ArcFurnaceCrane
+  parent: BaseMachinePowered
+  name: arc-furnace-crane-name
+  description: arc-furnace-crane-desc
+  components:
+  - type: ArcFurnaceCrane
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: BasicDevice
+  - type: DeviceLinkSink
+    ports:
+    - CraneReceiver
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-.5,-1.5,.5,1.5"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Transform
+    noRot: false
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Sprite
+    sprite: _Trauma/Structures/ArcForging/arcfurnacecrane.rsi
+    drawdepth: LargeObjects
+    directional: true
+    layers:
+    - state: industrialcrane
+
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: PowerState
+    idlePowerDraw: 100

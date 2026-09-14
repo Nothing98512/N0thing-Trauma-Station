@@ -1,0 +1,7 @@
+﻿- type: moltenmaterial
+  id: MoltenSteel
+  name: Molten-Steel
+
+- type: moltenmaterial
+  id: MoltenGlass
+  name: Molten-Glass

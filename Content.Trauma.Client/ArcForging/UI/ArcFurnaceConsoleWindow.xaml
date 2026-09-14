@@ -1,0 +1,43 @@
+﻿
+
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'comp-pda-ui-menu-title'}"
+               SetSize="400 400"
+               MinSize="400 400">
+    <TabContainer Name="MasterTabContainer">
+        <BoxContainer Name="Furnace"
+                      Orientation="Vertical"
+                      VerticalExpand="True"
+                      HorizontalExpand="True"
+                      MinSize="100 150">
+            <PanelContainer Name="ArcFurnaceControl" VerticalExpand="True" StyleClasses="BackgroundPanelDark">
+                <BoxContainer Margin="5 5 5 5" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                    <Label HorizontalAlignment="Center" Text="{Loc 'arcfurnace-console-window-details-label'}" />
+                    <RichTextLabel Name="ActivateArcFurnace" Access="Public" HorizontalExpand="True" />
+                        <Button Name="ArcFurnaceActivateButton"
+                                Access="Public"
+                                Text="{Loc 'arcfurnace-window-activate-button-text'}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                </BoxContainer>
+            </PanelContainer>
+            <PanelContainer Name="ArcFurnaceMissing" VerticalExpand="True" StyleClasses="BackgroundPanelDark">
+            <BoxContainer Margin="5 5 5 5" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Loc 'arcfurnace-console-window-no-arcfurnace-detected-label'}" />
+            </BoxContainer>
+            </PanelContainer>
+        </BoxContainer>
+        <BoxContainer Name="Crane"
+                      Orientation="Vertical"
+                      VerticalExpand="True"
+                      HorizontalExpand="False"
+                      MinSize="200 150">
+            <BoxContainer Name="CraneMissing" Margin="5 5 5 5" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Loc 'arcfurnace-console-window-no-crane-detected-label'}" />
+            </BoxContainer>
+            <BoxContainer Name="CranePresent" Margin="5 5 5 5" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Loc 'arcfurnace-console-window-crane-detected-label'}" />
+            </BoxContainer>
+        </BoxContainer>
+    </TabContainer>
+</DefaultWindow>

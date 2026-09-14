@@ -1,0 +1,52 @@
+﻿- type: entity
+  id: ArcFurnace
+  parent: BaseMachinePowered
+  name: arc-furnace-name
+  description: arc-furnace-desc
+  components:
+  - type: ArcFurnace
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: BasicDevice
+  - type: DeviceLinkSink
+    ports:
+    - ArcFurnaceReceiver
+#  - type: Appearance
+#  - type: GenericVisualizer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.1,-1.1,1.1,1.1"
+        density: 50
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Sprite
+    sprite: _Trauma/Structures/ArcForging/arcfurnace.rsi
+    drawdepth: LargeObjects
+    layers:
+    - state: arcfurnacebase
+
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: PowerState
+    idlePowerDraw: 100
+#  - type: ItemSlots
+#    slots:
+#      beakerSlot:
+#        whitelist:
+#          components:
+#          - FitsInArcFurnace
