@@ -73,6 +73,18 @@
   name: signal-port-name-tool-locked
   description: signal-port-description-tool-locked
 
+# Arc Furnace
+
+- type: sinkPort
+  id: ArcFurnaceReceiver
+  name: signal-port-name-arcfurnacecontrol
+  description: signal-port-description-arcfurnacecontrol
+
+- type: sinkPort
+  id: CraneReceiver
+  name: signal-port-name-cranecontrol
+  description: signal-port-description-cranecontrol
+
 # Locker/Unlock
 
 - type: sinkPort
